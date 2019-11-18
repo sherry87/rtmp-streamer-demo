@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>rtmp-streamer-demo</title>
+		<link rel="stylesheet" type="text/css" href="css/index.css" />
+	</head>
+
+	<body>
+		<div>
+			推送地址：
+			<input type="text" id="url"  value="rtmp://xxx:8080/live/"/>
+			<input type="text" id="name" value="9" />
+		</div>
+		<div class="btnDiv">
+			<button id="publish">推流</button>
+			<button id="play">拉流</button>
+			<button id="close"> 关闭</button>
+		</div>
+		<div class="left">
+			<h3>本地视频</h3>
+			<div class="pusher-wrap">
+				<object>
+					<embed id="rtmp-player" src="./js/RtmpStreamer.swf" bgcolor="#999999" quality="high" width="320" height="240"
+					 allowScriptAccess="sameDomain" type="application/x-shockwave-flash"></embed>
+				</object>
+			</div>
+		</div>
+		<div class="right">
+			<h3>对方视频</h3>
+			<div id="otherSide"></div>
+		</div>
+		<script src="js/jquery-1.10.2.min.js"></script>
+		<script src="js/TcPlayer-2.2.1.js"></script>
+		<script type="text/javascript" src="./js/require.js" data-main="./js/main"></script>
+	</body>
+</html>
